@@ -2,22 +2,34 @@
 pandoc = "3.10"
 typst = "0.15.0"
 
+[tasks.default]
+depends = ["build-all"]
+
 [tasks."build-book"]
 description = "Build a specific book in all formats"
-run = "uv run python -m build book $1"
+usage = '''
+arg "<book>" help="Book identifier to build"
+'''
+run = 'uv run python -m build book ${usage_book?}'
 
 [tasks."build-format"]
 description = "Build a book in a specific format"
-run = "uv run python -m build book $1 -f $2"
+usage = '''
+arg "<format>" help="Build format: epub, html, mobi, or pdf"
+arg "<book>" help="Book identifier to build"
+'''
+run = 'uv run python -m build book ${usage_book?} -f ${usage_format?}'
 
 [tasks."build-all"]
-alias = "default"
 description = "Build all books"
 run = "uv run python -m build all"
 
 [tasks."build-site"]
 description = "Generate HTML site for a book"
-run = "uv run python -m build site $1"
+usage = '''
+arg "<book>" help="Book identifier to build"
+'''
+run = 'uv run python -m build site ${usage_book?}'
 
 [tasks."build-site-all"]
 description = "Generate sites for all books"
@@ -107,11 +119,17 @@ run = "open htmlcov/index.html"
 
 [tasks."test:file"]
 description = "Run a specific test file"
-run = "uv run pytest tests/$1 -v"
+usage = '''
+arg "<file>" help="Test file to run"
+'''
+run = 'uv run pytest tests/${usage_file?} -v'
 
 [tasks."test:match"]
 description = "Run tests matching a pattern"
-run = "uv run pytest -k $1 -v"
+usage = '''
+arg "<pattern>" help="Pattern to match"
+'''
+run = 'uv run pytest -k ${usage_pattern?} -v'
 
 [tasks."test:watch"]
 description = "Watch tests"
