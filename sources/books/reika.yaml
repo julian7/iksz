@@ -15,40 +15,7 @@ book:
   module_type: "Világmodul"
   module_description: "Fantasy világ"
   copyright: "© IKSZ Projekt 1997-2000"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - chapters in reading order
 chapters:
   # Copyright and legal
   - section: "Jogi információk"
@@ -58,7 +25,7 @@ chapters:
         title: "Copyright"
         title_en: "Copyright"
         include_in_toc: false
-  
+
   # Part 1: Introduction
   - section: "Bevezetés"
     section_en: "Introduction"
@@ -67,7 +34,7 @@ chapters:
         title: "Szerzők"
         title_en: "Authors"
         include_in_toc: true
-      
+
       - file: "reika/intro/intro.md"
         title: "Bevezető"
         title_en: "Introduction"
@@ -81,7 +48,7 @@ chapters:
         title: "Háborúk Kora"
         title_en: "Age of Wars"
         include_in_toc: true
-      
+
       - file: "reika/02-kaosz.md"
         title: "Káoszkor"
         title_en: "Age of Chaos"
@@ -95,7 +62,7 @@ chapters:
         title: "Lakosság"
         title_en: "Population"
         include_in_toc: true
-      
+
       - file: "reika/04-birodalmak.md"
         title: "Birodalmak"
         title_en: "Empires"
@@ -128,7 +95,7 @@ metadata:
     - Inorr
     - gargoyle
     - world setting
-  
+
   # Dublin Core metadata
   dc:
     creator: "Kósa László (klinsi)"
@@ -142,9 +109,9 @@ build:
   # Chapter numbering
   number_chapters: true
   number_sections: true
-  
+
   # Table of contents
   toc_depth: 2
-  
+
   # Cross-references
   link_citations: false

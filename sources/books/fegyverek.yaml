@@ -15,40 +15,7 @@ book:
   module_type: "Szabálykiegészítő"
   module_description: "Harc, fegyverek, felszerelés"
   copyright: "© IKSZ Projekt 1997-2002"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - chapters in reading order
 chapters:
   # Copyright and legal
   - section: "Jogi információk"
@@ -58,7 +25,7 @@ chapters:
         title: "Copyright"
         title_en: "Copyright"
         include_in_toc: false
-  
+
   # Part 1: Introduction
   - section: "Bevezetés"
     section_en: "Introduction"
@@ -67,7 +34,7 @@ chapters:
         title: "Szerzők"
         title_en: "Authors"
         include_in_toc: true
-      
+
       - file: "fegyverek/intro/intro.md"
         title: "Bevezető"
         title_en: "Introduction"
@@ -81,37 +48,37 @@ chapters:
         title: "A harc"
         title_en: "Combat"
         include_in_toc: true
-      
+
       - file: "fegyverek/harc/skills.md"
         title: "Harci képzettségek"
         title_en: "Combat Skills"
         include_in_toc: true
-      
+
       - file: "fegyverek/harc/properties.md"
         title: "A fegyverek tulajdonságai"
         title_en: "Weapon Properties"
         include_in_toc: true
-      
+
       - file: "fegyverek/harc/example.md"
         title: "Hogyan folyik le a harc?"
         title_en: "How Does Combat Work?"
         include_in_toc: true
-      
+
       - file: "fegyverek/harc/continuous.md"
         title: "Harc - Folyamatos rendszer"
         title_en: "Combat - Continuous System"
         include_in_toc: true
-      
+
       - file: "fegyverek/weapons/unarmed.md"
         title: "Pusztakezes harc"
         title_en: "Unarmed Combat"
         include_in_toc: true
-      
+
       - file: "fegyverek/weapons/melee.md"
         title: "Közelharci fegyverek"
         title_en: "Melee Weapons"
         include_in_toc: true
-      
+
       - file: "fegyverek/weapons/ranged.md"
         title: "Lőfegyverek"
         title_en: "Ranged Weapons"
@@ -133,7 +100,7 @@ metadata:
     - combat
     - weapons
     - szabálykiegészítő
-  
+
   # Dublin Core metadata
   dc:
     creator: "Nagy Balázs, Kósa László, Polán Tamás"
@@ -147,16 +114,16 @@ build:
   # Chapter numbering
   number_chapters: true
   number_sections: true
-  
+
   # Table of contents
   toc_depth: 3
-  
+
   # Cross-references
   enable_cross_refs: true
-  
+
   # Output filename template
   output_basename: "iksz-fegyverek-v{version}"
-  
+
   # Include metadata in output
   include_metadata: true
 
@@ -164,7 +131,7 @@ build:
 notes: |
   Original publication: March 1, 2002
   Authors: Nagy Balázs (Jul the Keeper), Kósa László (Klinsi), Polán Tamás (Rizzo)
-  
+
   This supplement contains:
   - Detailed combat rules
   - Combat skills and skill trees
@@ -173,6 +140,6 @@ notes: |
   - Complete ranged weapon list
   - Unarmed combat rules
   - Combat examples
-  
+
   Heavy table content - requires careful conversion of weapon stat blocks
   and skill tables from ConTeXt to Markdown.

@@ -15,40 +15,7 @@ book:
   module_type: "Szabálykiegészítő"
   module_description: "Mágia, Pszi, Természetfeletti képességek"
   copyright: "© IKSZ Projekt 1997-2002"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - chapters in reading order
 chapters:
   # Copyright and legal
   - section: "Jogi információk"
@@ -58,7 +25,7 @@ chapters:
         title: "Copyright"
         title_en: "Copyright"
         include_in_toc: false
-  
+
   # Part 1: Introduction
   - section: "Bevezetés"
     section_en: "Introduction"
@@ -67,7 +34,7 @@ chapters:
         title: "Szerzők"
         title_en: "Authors"
         include_in_toc: true
-      
+
       - file: "miracle/intro/intro.md"
         title: "Természetfeletti"
         title_en: "Supernatural"
@@ -81,47 +48,47 @@ chapters:
         title: "Természeti mágia"
         title_en: "Nature Magic"
         include_in_toc: true
-      
+
       - file: "miracle/magic/elemental.md"
         title: "Elemi mágia"
         title_en: "Elemental Magic"
         include_in_toc: true
-      
+
       - file: "miracle/magic/vital.md"
         title: "Életerő"
         title_en: "Vital Force"
         include_in_toc: true
-      
+
       - file: "miracle/magic/enchantment.md"
         title: "Bűvölés"
         title_en: "Enchantment"
         include_in_toc: true
-      
+
       - file: "miracle/magic/illusion.md"
         title: "Illúzió"
         title_en: "Illusion"
         include_in_toc: true
-      
+
       - file: "miracle/magic/alchemy.md"
         title: "Alkímia"
         title_en: "Alchemy"
         include_in_toc: true
-      
+
       - file: "miracle/magic/transformation.md"
         title: "Változtatás"
         title_en: "Transformation"
         include_in_toc: true
-      
+
       - file: "miracle/magic/esp.md"
         title: "Észlelő mágia"
         title_en: "ESP Magic"
         include_in_toc: true
-      
+
       - file: "miracle/magic/antimagic.md"
         title: "Ellenmágia"
         title_en: "Anti-Magic"
         include_in_toc: true
-      
+
       - file: "miracle/magic/area.md"
         title: "Területmágia"
         title_en: "Area Magic"
@@ -135,22 +102,22 @@ chapters:
         title: "Telepátia"
         title_en: "Telepathy"
         include_in_toc: true
-      
+
       - file: "miracle/psi/psychokinesis.md"
         title: "Pszichokinézis"
         title_en: "Psychokinesis"
         include_in_toc: true
-      
+
       - file: "miracle/psi/esp.md"
         title: "Érzékeken túli érzékelés"
         title_en: "ESP"
         include_in_toc: true
-      
+
       - file: "miracle/psi/psychodynamics.md"
         title: "Pszichodinamika"
         title_en: "Psychodynamics"
         include_in_toc: true
-      
+
       - file: "miracle/psi/teleportation.md"
         title: "Teleportálás"
         title_en: "Teleportation"
@@ -174,7 +141,7 @@ metadata:
     - természetfeletti
     - supernatural
     - szabálykiegészítő
-  
+
   # Dublin Core metadata
   dc:
     creator: "Nagy Balázs, Szűcs Gábor"
@@ -188,16 +155,16 @@ build:
   # Chapter numbering
   number_chapters: true
   number_sections: true
-  
+
   # Table of contents
   toc_depth: 3
-  
+
   # Cross-references
   enable_cross_refs: true
-  
+
   # Output filename template
   output_basename: "iksz-miracle-v{version}"
-  
+
   # Include metadata in output
   include_metadata: true
 
@@ -205,7 +172,7 @@ build:
 notes: |
   Original publication: June 2001
   Authors: Nagy Balázs (Jul the Keeper), Szűcs Gábor (Haji/Otto)
-  
+
   This supplement contains:
   - Introduction to supernatural powers in IKSZ
   - 10 magic disciplines with detailed rules
@@ -213,7 +180,7 @@ notes: |
   - Power descriptions and usage examples
   - Tables for magic and psi effects
   - Integration with core rulebook
-  
+
   Special conversion needs:
   - Custom \gyak{}{}{} macros for power definitions
   - Complex tables for power effects

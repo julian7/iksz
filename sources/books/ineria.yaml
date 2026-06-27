@@ -16,40 +16,7 @@ book:
   module_type: "Világbeállítás"
   module_description: "Fantasy világ, Istenek, Fajok, Országok"
   copyright: "© IKSZ Projekt 2002"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - chapters in reading order
 chapters:
   # Copyright and legal
   - section: "Jogi információk"
@@ -59,7 +26,7 @@ chapters:
         title: "Copyright"
         title_en: "Copyright"
         include_in_toc: false
-  
+
   # Part 1: Introduction
   - section: "Bevezetés"
     section_en: "Introduction"
@@ -68,7 +35,7 @@ chapters:
         title: "Szerzők"
         title_en: "Authors"
         include_in_toc: true
-      
+
       - file: "ineria/intro/intro.md"
         title: "Bevezető"
         title_en: "Introduction"
@@ -82,7 +49,7 @@ chapters:
         title: "Térkép"
         title_en: "Map"
         include_in_toc: true
-      
+
       - file: "ineria/fajok.md"
         title: "Fajok"
         title_en: "Races"
@@ -96,7 +63,7 @@ chapters:
         title: "Őstörténelem"
         title_en: "Ancient History"
         include_in_toc: true
-      
+
       - file: "ineria/tori/ujabbkor.md"
         title: "Újabbkori történelem"
         title_en: "Modern History"
@@ -110,7 +77,7 @@ chapters:
         title: "A Molekizmus tanítása"
         title_en: "The Teaching of Molecism"
         include_in_toc: true
-      
+
       - file: "ineria/vallas/istenek.md"
         title: "Istenek és vallások"
         title_en: "Gods and Religions"
@@ -153,7 +120,7 @@ metadata:
     - történelem
     - vallás
     - world setting
-  
+
   # Dublin Core metadata
   dc:
     creator: "Nagy Balázs (Jul the Keeper)"
@@ -167,16 +134,16 @@ build:
   # Chapter numbering
   number_chapters: true
   number_sections: true
-  
+
   # Table of contents
   toc_depth: 3
-  
+
   # Cross-references
   enable_cross_refs: true
-  
+
   # Output filename template
   output_basename: "iksz-ineria-v{version}"
-  
+
   # Include metadata in output
   include_metadata: true
 
@@ -185,7 +152,7 @@ notes: |
   Original publication: March 2002
   Author: Nagy Balázs (Jul the Keeper) <js@iksz.hu>
   Helper: Varga József (Priest) <priest66@freemail.hu>
-  
+
   This world supplement contains:
   - Map of Inéria (island world)
   - 5 playable races (Humans, Elves, Dwarves, Orcs, Halflings/Manó)
@@ -203,7 +170,7 @@ notes: |
   - 9 Crises/Epochs that shaped the world
   - Unique time system (kvárts, nonáds, pentáds, oktáds)
   - Notes on future expansions (travel guide, magic schools, etc.)
-  
+
   Special features:
   - Religious world where gods actively compete for influence
   - No traditional good vs. evil, but Power vs. Balance vs. Order
@@ -211,7 +178,7 @@ notes: |
   - Rich political intrigue between nations
   - Hundred Years' War history and current peace
   - Peace Committee and Scholars' Society organizations
-  
+
   Special conversion needs:
   - Map image reference (ineria.png)
   - Time system conversion table

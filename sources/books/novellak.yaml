@@ -15,40 +15,7 @@ book:
   module_type: "Fikció"
   module_description: "Novellák, Történetek, IKSZ világok"
   copyright: "© Nagy Balázs, Érfalvy Áron 2000-2003"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - four novels as chapters
 chapters:
   # Anthology Introduction
   - section: "Előszó"
@@ -58,7 +25,7 @@ chapters:
         title: "Az antológiáról"
         title_en: "About the Anthology"
         include_in_toc: true
-  
+
   # Novel 1: A hajó (Doraddon)
   - section: "A hajó"
     section_en: "The Ship"
@@ -115,7 +82,7 @@ metadata:
     - Fényhozó
     - Hungarian fiction
     - short stories
-  
+
   # Dublin Core metadata
   dc:
     creator: "Nagy Balázs (Jul the Keeper), Érfalvy Áron"
@@ -129,63 +96,63 @@ build:
   # Chapter numbering - disabled for anthology
   number_chapters: false
   number_sections: false
-  
+
   # Table of contents
   toc_depth: 2
-  
+
   # Cross-references
   enable_cross_refs: false
-  
+
   # Output filename template
   output_basename: "iksz-novellak-v{version}"
-  
+
   # Include metadata in output
   include_metadata: true
 
 # Notes for conversion
 notes: |
   IKSZ Short Story Anthology
-  
+
   This collection contains four short stories set in different IKSZ worlds:
-  
+
   1. "A hajó" (The Ship) - Doraddon setting
      Author: Nagy Balázs (Julian)
      Date: November 12, 2000
      World: Doraddon (dark fantasy, apocalyptic)
      Theme: Escape from a dying city, plague/corruption spreading
-  
+
   2. "Az Álomlátó" (The Dream-Seer) - Inéria setting
      Author: Nagy Balázs (Julian)
      Date: November 12, 2000
      World: Inéria (classic fantasy)
      Theme: Dreams connecting two parallel worlds, mystical adventure
-  
+
   3. "A fényhozó legendája: A gyermek" (The Legend of the Light-Bringer: The Child)
      Author: Érfalvy Áron
      Date: April 17, 2003
      World: Fényhozó (epic fantasy)
      Theme: Origin story of a legendary hero, coming of age
-  
+
   4. "Ismerd fel ellenfeled / Know Your Enemy"
      Author: Nagy Balázs (Julian)
      Date: March 3, 2002
      World: Cyberpunk future
      Language: English
      Theme: AI consciousness, virtual reality, identity
-  
+
   Conversion notes:
   - Original sources were PDF files in original/novel/
   - Extracted to plain text in books/novels/src/*.txt
   - Cleaned and formatted to Markdown in books/novels/*.md
   - Moved to sources/novellak/*.md for build system
-  
+
   Special considerations:
   - Each story is self-contained, no cross-references
   - "Know Your Enemy" is in English (all others in Hungarian)
   - Stories showcase different IKSZ worlds and genres
   - Published across 3 years (2000-2003)
   - Demonstrates versatility of IKSZ system
-  
+
   Build settings:
   - No chapter numbering (anthology format)
   - Each story is a separate section

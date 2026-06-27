@@ -15,40 +15,7 @@ book:
   module_type: "Világbeállítás"
   module_description: "Sötét Fantasy, Túlélés, A Pusztulat, Mágikus Rend"
   copyright: "© IKSZ Projekt 2002"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - chapters in reading order
 chapters:
   # Copyright and legal
   - section: "Jogi információk"
@@ -58,7 +25,7 @@ chapters:
         title: "Copyright"
         title_en: "Copyright"
         include_in_toc: false
-  
+
   # Part 1: Introduction
   - section: "Bevezetés"
     section_en: "Introduction"
@@ -67,7 +34,7 @@ chapters:
         title: "Szerzők"
         title_en: "Authors"
         include_in_toc: true
-      
+
       - file: "doraddon/intro/intro.md"
         title: "Bevezető"
         title_en: "Introduction"
@@ -81,12 +48,12 @@ chapters:
         title: "Doraddon térképe"
         title_en: "Map of Doraddon"
         include_in_toc: true
-      
+
       - file: "doraddon/02-tortenet.md"
         title: "Történelem"
         title_en: "History"
         include_in_toc: true
-      
+
       - file: "doraddon/03-varosok.md"
         title: "Városok"
         title_en: "Cities"
@@ -100,7 +67,7 @@ chapters:
         title: "Természetfölötti"
         title_en: "Supernatural"
         include_in_toc: true
-      
+
       - file: "doraddon/05-rendek.md"
         title: "Rendek"
         title_en: "Orders"
@@ -142,7 +109,7 @@ metadata:
     - pusztulat
     - túlélés
     - world setting
-  
+
   # Dublin Core metadata
   dc:
     creator: "Érfalvy Áron (E.y.A), Nagy Balázs (Julian)"
@@ -156,16 +123,16 @@ build:
   # Chapter numbering
   number_chapters: true
   number_sections: true
-  
+
   # Table of contents
   toc_depth: 3
-  
+
   # Cross-references
   enable_cross_refs: true
-  
+
   # Output filename template
   output_basename: "iksz-doraddon-v{version}"
-  
+
   # Include metadata in output
   include_metadata: true
 
@@ -173,7 +140,7 @@ build:
 notes: |
   Original publication: March 2002
   Authors: Érfalvy Áron (E.y.A), Nagy Balázs (Julian)
-  
+
   This world supplement contains:
   - Map of Doraddon (world map image)
   - Complete history from creation to present (1542 years)
@@ -181,7 +148,7 @@ notes: |
   - Magic system (wizards and shamans)
   - Orders and factions (The Order, Masters of Hope, etc.)
   - Peoples and cultures (Brehk, Draggit, Mountain folk, Nomads)
-  
+
   Setting features:
   - Dark fantasy atmosphere
   - Created by Seven Ancients (Ősmágusok)
@@ -192,13 +159,13 @@ notes: |
   - Desperate survival against apocalyptic forces
   - Limited resources and overpopulation
   - Loss of ancient knowledge
-  
+
   Historical periods:
   - Age of the Ancients (0-511): Golden age under Seven Mages
   - Age of Fear (512-923): Ancients vanish, Desolation begins
   - Age of Chaos (924-1208): Cities fall, massive death toll
   - Age of Order (1209-present): The Order takes control
-  
+
   Major cities:
   - Dun'Bar (The Most Protected City): 15 million, largest fortress
   - Morgador (Stone Heap): 2 million, isolated but holding
@@ -208,26 +175,26 @@ notes: |
   - Dorarir (destroyed, partially rebuilt)
   - Dunbar (destroyed)
   - Plus destroyed cities: Merramon, Woladdon, Bhren'dor, Merano
-  
+
   Key factions:
   - The Order (Megtisztítók Rendje): Brutal but necessary control
   - Masters of Hope (Remény Mesterei): Resistance against Order
   - Depositories of Hope: Searching for gods/salvation
   - Demon cults: Dark pacts with outer planes
-  
+
   Peoples:
   - Brehk: Stone-natured, hardy survivors
   - Draggit: Dragon-descended, fewer than 100 remain
   - Mountain Folk (Hegyi Népek): Nomadic, resistant
   - Nomads: Desert wanderers
-  
+
   Magic system:
   - Chaotic Doraddon energy field (unstable, dangerous)
   - Demonic plane energy (controlled but perilous)
   - Wizards vs. Shamans distinction
   - Most ancient knowledge lost
   - Protective domes require massive magical power
-  
+
   Special features:
   - No active gods (abandoned/lost concept)
   - Population: ~10-15 million (down from 650 million)
@@ -236,7 +203,7 @@ notes: |
   - Constant monster invasions through protective domes
   - Portal magic nearly impossible through Desolation
   - Resource scarcity (ore mines depleted)
-  
+
   Themes:
   - Hope vs. despair
   - Order vs. freedom
@@ -244,7 +211,7 @@ notes: |
   - Lost knowledge and civilization decline
   - Humanity without divine guidance
   - The price of safety
-  
+
   Special conversion notes:
   - Map image included (doraddon.png)
   - Extensive quotations from historical figures

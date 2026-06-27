@@ -15,40 +15,7 @@ book:
   module_type: "Filozófia"
   module_description: "Alapító dokumentum, rendszerfilozófia, közösségi fejlesztés"
   copyright: "© Nagy Balázs (Julian) 1997-2000"
-  
-  # Cover page settings
-  cover:
-    enabled: true
-    show_date: true
-    show_version: true
-  
-  # Output options
-  output:
-    formats:
-      - epub
-      - html
-      - mobi
-      - pdf
-    
-    # PDF-specific options
-    pdf:
-      engine: pdflatex
-      geometry: "margin=1in"
-      papersize: a4
-      fontsize: 11pt
-    
-    # EPUB-specific options
-    epub:
-      cover: false
-      stylesheet: false
-    
-    # HTML-specific options
-    html:
-      standalone: true
-      toc: true
-      css: style.css
 
-# Book structure - single document
 chapters:
   - section: "Kiáltvány"
     section_en: "Manifesto"
@@ -77,7 +44,7 @@ metadata:
     - szabad fejlesztés
     - Hungarian
     - philosophy
-  
+
   # Dublin Core metadata
   dc:
     creator: "Nagy Balázs (Julian)"
@@ -91,16 +58,16 @@ build:
   # Chapter numbering - disabled for single document
   number_chapters: false
   number_sections: false
-  
+
   # Table of contents
   toc_depth: 2
-  
+
   # Cross-references
   enable_cross_refs: false
-  
+
   # Output filename template
   output_basename: "iksz-manifesto-v{version}"
-  
+
   # Include metadata in output
   include_metadata: true
 
@@ -109,61 +76,61 @@ notes: |
   Original publication: May 1, 2000
   Original document date: October 13, 1997
   Author: Nagy Balázs (Julian)
-  
+
   This manifesto is the founding document of the IKSZ (Igen Könnyű Szerepjáték)
   Hungarian tabletop RPG system. It represents a historically significant moment
   in Hungarian RPG development as the first attempt to create a community-driven,
   open-source RPG system in Hungary.
-  
+
   Key principles outlined:
-  
+
   1. **Simplicity**: Create an easy-to-learn system that doesn't burden players
      with excessive rules and supplements
-  
+
   2. **World-independence**: Develop a universal system that can support multiple
      different campaign settings
-  
+
   3. **Open development**: Use the internet (specifically mailing lists) as the
      primary development platform to ensure transparency and community participation
-  
+
   4. **Non-commercial**: Free from commercial pressures, allowing focus on actual
      gameplay rather than market demands
-  
+
   5. **Hungarian focus**: Address the need for quality Hungarian-language RPG
      content with local cultural relevance
-  
+
   Community participation model:
   - Creators: Those whose ideas are implemented in the game
   - Contributors: Those whose ideas inspire modifications
   - Playtesters: Those who test and provide feedback
   - All contributors are acknowledged in credits
-  
+
   Historical context:
   - Written in 1997 when only 7 Hungarian RPGs existed
   - Published in final form May 2000
   - Predates modern open-source game development movements
   - Pioneered community-driven development in Hungarian RPG scene
-  
+
   The manifesto criticizes:
   - Overly complex, rules-heavy systems
   - Commercial pressure to release endless supplements
   - Lack of Hungarian cultural relevance in available games
   - Systems too tightly coupled to specific worlds
-  
+
   The manifesto proposes:
   - Internet-based collaborative development (revolutionary for 1997)
   - Merit-based contributor recognition
   - Focus on actual gameplay over commercial viability
   - Universal system supporting multiple worlds
-  
+
   This document is essential reading for understanding the IKSZ philosophy
   and the values that guided its development. It represents the idealistic
   vision that created one of Hungary's most successful community-developed
   RPG systems.
-  
+
   Email contacts (historical):
   - kaland-admin@iksz.hu (Adventures List)
   - iksz-admin@iksz.hu (IKSZ Development List)
-  
+
   Location: Győr, Hungary
   Original format: ConTeXt PDF
