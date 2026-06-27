@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$title$</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    .title-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      color: #ffffff;
+    }
+    .title-page h1 {
+      font-size: 3.5em;
+      font-weight: bold;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .title-page .subtitle {
+      font-size: 1.8em;
+      font-weight: 300;
+      margin: 0 0 2rem 0;
+      opacity: 0.9;
+    }
+    .title-page .module-type {
+      font-size: 1.2em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 2rem 0 0.5rem 0;
+      padding: 0.5rem 1.5rem;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .title-page .module-desc {
+      font-size: 1.1em;
+      margin: 0.5rem 0 3rem 0;
+      opacity: 0.85;
+    }
+    .title-page .version {
+      font-size: 1.3em;
+      font-weight: 500;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+    .title-page .metadata {
+      margin-top: 3rem;
+      font-size: 0.95em;
+      opacity: 0.8;
+    }
+    .title-page .metadata p {
+      margin: 0.3rem 0;
+    }
+    .title-page .separator {
+      width: 200px;
+      height: 2px;
+      background: rgba(255,255,255,0.5);
+      margin: 2rem auto;
+    }
+    @media (max-width: 768px) {
+      .title-page h1 {
+        font-size: 2.5em;
+      }
+      .title-page .subtitle {
+        font-size: 1.4em;
+      }
+      .title-page .module-type {
+        font-size: 1em;
+      }
+    }
+    @media print {
+      .title-page {
+        background: white;
+        color: #2c3e50;
+        page-break-after: always;
+      }
+      .title-page h1,
+      .title-page .subtitle {
+        text-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="title-page">
+    <h1>$title$</h1>
+    $if(subtitle)$
+    <div class="subtitle">$subtitle$</div>
+    $endif$
+    
+    $if(module_type)$
+    <div class="separator"></div>
+    <div class="module-type">$module_type$</div>
+    $endif$
+    
+    $if(module_desc)$
+    <div class="module-desc">$module_desc$</div>
+    $endif$
+    
+    $if(version)$
+    <div class="version">Verzió $version$</div>
+    $endif$
+    
+    <div class="separator"></div>
+    
+    <div class="metadata">
+      $if(compiled_by)$
+      <p><strong>Összeállította:</strong> $compiled_by$</p>
+      $endif$
+      $if(author)$
+      <p><strong>Szerző:</strong> $author$</p>
+      $endif$
+      $if(publisher)$
+      <p><strong>Kiadó:</strong> $publisher$</p>
+      $endif$
+      $if(date)$
+      <p>$date$</p>
+      $endif$
+      $if(rights)$
+      <p style="margin-top: 1rem; font-size: 0.9em;">$rights$</p>
+      $endif$
+    </div>
+  </div>
+</body>
+</html>

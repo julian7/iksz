@@ -1,0 +1,254 @@
+# IKSZ Doraddon - Book Definition
+# Dark fantasy world setting for IKSZ RPG
+
+book:
+  id: doraddon
+  title: "IKSZ Doraddon"
+  title_en: "IKSZ Doraddon"
+  subtitle: "A Halott Világ"
+  subtitle_en: "The Dead World"
+  version: "1.0"
+  language: hu
+  author: "Érfalvy Áron (E.y.A), Nagy Balázs (Julian)"
+  compiled_by: "Érfalvy Áron (E.y.A), Nagy Balázs (Julian)"
+  description: "Doraddon, a reményvesztett világ. Egy sötét fantasy setting, ahol hét ősmágus teremtett életet egy halott bolygón, de a civilizációt most a Pusztulat fenyegeti. A városok mágikus védernyők alatt küzdenek a túlélésért, miközben a Rend vasfegyelmmel tartja fenn a rendet."
+  module_type: "Világbeállítás"
+  module_description: "Sötét Fantasy, Túlélés, A Pusztulat, Mágikus Rend"
+  copyright: "© IKSZ Projekt 2002"
+  
+  # Cover page settings
+  cover:
+    enabled: true
+    show_date: true
+    show_version: true
+  
+  # Output options
+  output:
+    formats:
+      - epub
+      - html
+      - mobi
+      - pdf
+    
+    # PDF-specific options
+    pdf:
+      engine: pdflatex
+      geometry: "margin=1in"
+      papersize: a4
+      fontsize: 11pt
+    
+    # EPUB-specific options
+    epub:
+      cover: false
+      stylesheet: false
+    
+    # HTML-specific options
+    html:
+      standalone: true
+      toc: true
+      css: style.css
+
+# Book structure - chapters in reading order
+chapters:
+  # Copyright and legal
+  - section: "Jogi információk"
+    section_en: "Legal Information"
+    pages:
+      - file: "doraddon/intro/copyright.md"
+        title: "Copyright"
+        title_en: "Copyright"
+        include_in_toc: false
+  
+  # Part 1: Introduction
+  - section: "Bevezetés"
+    section_en: "Introduction"
+    pages:
+      - file: "doraddon/intro/authors.md"
+        title: "Szerzők"
+        title_en: "Authors"
+        include_in_toc: true
+      
+      - file: "doraddon/intro/intro.md"
+        title: "Bevezető"
+        title_en: "Introduction"
+        include_in_toc: true
+
+  # Part 2: The World
+  - section: "A Világ"
+    section_en: "The World"
+    pages:
+      - file: "doraddon/01-terkep.md"
+        title: "Doraddon térképe"
+        title_en: "Map of Doraddon"
+        include_in_toc: true
+      
+      - file: "doraddon/02-tortenet.md"
+        title: "Történelem"
+        title_en: "History"
+        include_in_toc: true
+      
+      - file: "doraddon/03-varosok.md"
+        title: "Városok"
+        title_en: "Cities"
+        include_in_toc: true
+
+  # Part 3: Magic and Orders
+  - section: "Mágia és Rendek"
+    section_en: "Magic and Orders"
+    pages:
+      - file: "doraddon/04-magia.md"
+        title: "Természetfölötti"
+        title_en: "Supernatural"
+        include_in_toc: true
+      
+      - file: "doraddon/05-rendek.md"
+        title: "Rendek"
+        title_en: "Orders"
+        include_in_toc: true
+
+  # Part 4: Peoples
+  - section: "Népek"
+    section_en: "Peoples"
+    pages:
+      - file: "doraddon/06-nepek.md"
+        title: "Népek"
+        title_en: "Peoples"
+        include_in_toc: true
+
+  # Appendix
+  - section: "Függelék"
+    section_en: "Appendix"
+    pages:
+      - file: "doraddon/99-kiegeszitesek.md"
+        title: "Egy halvány mécses a sötétségben"
+        title_en: "A Faint Candle in the Darkness"
+        include_in_toc: true
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2002-03-01"
+  rights: "Szabad Publikáció Licensz v1.0"
+  subject: "Szerepjáték, Dark Fantasy, Világbeállítás, Hungarian RPG"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - dark fantasy
+    - világ
+    - Doraddon
+    - ősmágusok
+    - pusztulat
+    - túlélés
+    - world setting
+  
+  # Dublin Core metadata
+  dc:
+    creator: "Érfalvy Áron (E.y.A), Nagy Balázs (Julian)"
+    contributor: "IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Build options
+build:
+  # Chapter numbering
+  number_chapters: true
+  number_sections: true
+  
+  # Table of contents
+  toc_depth: 3
+  
+  # Cross-references
+  enable_cross_refs: true
+  
+  # Output filename template
+  output_basename: "iksz-doraddon-v{version}"
+  
+  # Include metadata in output
+  include_metadata: true
+
+# Notes for conversion
+notes: |
+  Original publication: March 2002
+  Authors: Érfalvy Áron (E.y.A), Nagy Balázs (Julian)
+  
+  This world supplement contains:
+  - Map of Doraddon (world map image)
+  - Complete history from creation to present (1542 years)
+  - Detailed city descriptions (7 major cities + destroyed cities)
+  - Magic system (wizards and shamans)
+  - Orders and factions (The Order, Masters of Hope, etc.)
+  - Peoples and cultures (Brehk, Draggit, Mountain folk, Nomads)
+  
+  Setting features:
+  - Dark fantasy atmosphere
+  - Created by Seven Ancients (Ősmágusok)
+  - Magic-woven world without gods
+  - The Desolation (Pusztulat) consuming the world
+  - Cities under magical protective domes
+  - Strict martial law under The Order (Rend)
+  - Desperate survival against apocalyptic forces
+  - Limited resources and overpopulation
+  - Loss of ancient knowledge
+  
+  Historical periods:
+  - Age of the Ancients (0-511): Golden age under Seven Mages
+  - Age of Fear (512-923): Ancients vanish, Desolation begins
+  - Age of Chaos (924-1208): Cities fall, massive death toll
+  - Age of Order (1209-present): The Order takes control
+  
+  Major cities:
+  - Dun'Bar (The Most Protected City): 15 million, largest fortress
+  - Morgador (Stone Heap): 2 million, isolated but holding
+  - Liramo: ~3.75 million
+  - Verlina: ~1.87 million
+  - Aldahir (vanished 1480)
+  - Dorarir (destroyed, partially rebuilt)
+  - Dunbar (destroyed)
+  - Plus destroyed cities: Merramon, Woladdon, Bhren'dor, Merano
+  
+  Key factions:
+  - The Order (Megtisztítók Rendje): Brutal but necessary control
+  - Masters of Hope (Remény Mesterei): Resistance against Order
+  - Depositories of Hope: Searching for gods/salvation
+  - Demon cults: Dark pacts with outer planes
+  
+  Peoples:
+  - Brehk: Stone-natured, hardy survivors
+  - Draggit: Dragon-descended, fewer than 100 remain
+  - Mountain Folk (Hegyi Népek): Nomadic, resistant
+  - Nomads: Desert wanderers
+  
+  Magic system:
+  - Chaotic Doraddon energy field (unstable, dangerous)
+  - Demonic plane energy (controlled but perilous)
+  - Wizards vs. Shamans distinction
+  - Most ancient knowledge lost
+  - Protective domes require massive magical power
+  
+  Special features:
+  - No active gods (abandoned/lost concept)
+  - Population: ~10-15 million (down from 650 million)
+  - Weekly harvest cycles (magically enhanced)
+  - Water contamination requiring magical purification
+  - Constant monster invasions through protective domes
+  - Portal magic nearly impossible through Desolation
+  - Resource scarcity (ore mines depleted)
+  
+  Themes:
+  - Hope vs. despair
+  - Order vs. freedom
+  - Survival at any cost
+  - Lost knowledge and civilization decline
+  - Humanity without divine guidance
+  - The price of safety
+  
+  Special conversion notes:
+  - Map image included (doraddon.png)
+  - Extensive quotations from historical figures
+  - Detailed city descriptions with demographics
+  - Complex timeline across four ages
+  - Multiple factions and orders
+  - Rich worldbuilding with peoples and cultures

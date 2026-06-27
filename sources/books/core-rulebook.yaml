@@ -1,0 +1,141 @@
+# IKSZ Core Rulebook - Book Definition
+# This file defines the structure and metadata for the complete core rulebook
+
+book:
+  id: core-rulebook
+  title: "Általános szerepjáték bármilyen helyszínre"
+  title_en: "General Roleplaying for Any Setting"
+  subtitle: "Alapmodul"
+  subtitle_en: "Base Module"
+  released: "2002. március 1."
+  language: hu
+  author: "Az Igen Könnyű Szerepjáték fejlesztői"
+  compiled_by: "Nagy Balázs"
+  description: "Az IKSZ (Igen Könnyű Szerepjáték) teljes alapszabálya, amely tartalmazza a játékosoknak és mesélőknek szükséges összes szabályt."
+  module_type: "Alapmodul"
+
+# Book structure - chapters in reading order
+chapters:
+  # Copyright and legal
+  - section: "Jogi információk"
+    section_en: "Legal Information"
+    include_in_toc: false
+    pages:
+      - file: "core/intro/copyright.md"
+        title: "Copyright"
+        title_en: "Copyright"
+
+  # Part 1: Introduction
+  - pages:
+      - file: "core/intro/intro.md"
+        title: "Bevezetés"
+        title_en: "Introduction"
+
+  # Part 2: Player's Guide
+  - section: "Játékosoknak"
+    section_en: "For Players"
+    pages:
+      - file: "core/player/howto.md"
+        title: "Hogyan játsszunk?"
+        title_en: "How to Play"
+
+      - file: "core/player/example.md"
+        title: "Példajáték"
+        title_en: "Example Game"
+
+  # Part 3: Character Creation
+  - section: "Karakteralkotás"
+    section_en: "Character Creation"
+    pages:
+      - file: "core/karakter/karakter.md"
+        title: "Karakteralkotás"
+        title_en: "Character Creation"
+
+      - file: "core/karakter/tul.md"
+        title: "Tulajdonságok"
+        title_en: "Attributes"
+
+      - file: "core/karakter/kepz.md"
+        title: "Képzettségek"
+        title_en: "Skills"
+
+      - file: "core/karakter/fejl.md"
+        title: "Fejlődés"
+        title_en: "Character Advancement"
+
+      - file: "core/karakter/elony.md"
+        title: "Előnyök és hátrányok"
+        title_en: "Advantages and Disadvantages"
+
+  # Part 4: Game Mechanics
+  - section: "Játékmechanika"
+    section_en: "Game Mechanics"
+    pages:
+      - file: "core/korny/proba.md"
+        title: "Próbadobások"
+        title_en: "Skill Checks"
+
+      - file: "core/korny/harc-folyamatos.md"
+        title: "Harc - Folyamatos rendszer"
+        title_en: "Combat - Continuous System"
+
+      - file: "core/korny/harc-fazis.md"
+        title: "Harc - Fázisrendszer"
+        title_en: "Combat - Phase System"
+
+      - file: "core/korny/seb.md"
+        title: "Sebesülés és gyógyulás"
+        title_en: "Injury and Healing"
+
+      - file: "core/korny/felsz.md"
+        title: "Felszerelés"
+        title_en: "Equipment"
+
+  # Part 5: Game Master's Guide
+  - section: "Mesélőknek"
+    section_en: "For Game Masters"
+    pages:
+      - file: "core/gm/jatekosok.md"
+        title: "Játékosok kezelése"
+        title_en: "Managing Players"
+
+      - file: "core/gm/fp.md"
+        title: "FP osztás"
+        title_en: "Experience Point Distribution"
+
+      - file: "core/gm/targyak.md"
+        title: "Tárgyak és értékek"
+        title_en: "Items and Values"
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2025"
+  rights: "Creative Commons BY-SA 4.0"
+  subject: "Szerepjáték, Szabálykönyv, Hungarian RPG"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - szabálykönyv
+    - tabletop
+
+  # Dublin Core metadata
+  dc:
+    creator: "IKSZ Fejlesztők"
+    contributor: "IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Notes for future enhancements
+notes: |
+  Future additions:
+  - Cover image (cover.jpg or cover.png)
+  - Custom CSS stylesheet (styles/book.css)
+  - Appendices (optional sections)
+  - Index generation
+  - Glossary
+  - Character sheet templates
+  - Quick reference cards

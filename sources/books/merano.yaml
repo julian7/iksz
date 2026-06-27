@@ -1,0 +1,201 @@
+# IKSZ Merano - Book Definition
+# Post-apocalyptic world setting for IKSZ RPG
+
+book:
+  id: merano
+  title: "IKSZ Merano"
+  title_en: "IKSZ Merano"
+  subtitle: "Posztapokaliptikus Világleírás"
+  subtitle_en: "Post-Apocalyptic World Setting"
+  version: "1.0"
+  language: hu
+  author: "Nagy Balázs (Julian)"
+  compiled_by: "Nagy Balázs (Julian)"
+  description: "Merano, egy posztapokaliptikus világ, ahol a civilizáció középkori szintre süllyedt vissza az Istenek Összecsapása után. A túlélők egy félszigeten próbálnak újjáépíteni, miközben szembenéznek a tudatlanság, boszorkányüldözés és城államok közötti konfliktusok kihívásaival."
+  module_type: "Világbeállítás"
+  module_description: "Posztapokalipszis, Mad Max hangulat, Pszi-üldözés"
+  copyright: "© IKSZ Projekt 2002"
+  
+  # Cover page settings
+  cover:
+    enabled: true
+    show_date: true
+    show_version: true
+  
+  # Output options
+  output:
+    formats:
+      - epub
+      - html
+      - mobi
+      - pdf
+    
+    # PDF-specific options
+    pdf:
+      engine: pdflatex
+      geometry: "margin=1in"
+      papersize: a4
+      fontsize: 11pt
+    
+    # EPUB-specific options
+    epub:
+      cover: false
+      stylesheet: false
+    
+    # HTML-specific options
+    html:
+      standalone: true
+      toc: true
+      css: style.css
+
+# Book structure - chapters in reading order
+chapters:
+  # Copyright and legal
+  - section: "Jogi információk"
+    section_en: "Legal Information"
+    pages:
+      - file: "merano/intro/copyright.md"
+        title: "Copyright"
+        title_en: "Copyright"
+        include_in_toc: false
+  
+  # Part 1: Introduction
+  - section: "Bevezetés"
+    section_en: "Introduction"
+    pages:
+      - file: "merano/intro/authors.md"
+        title: "Szerzők"
+        title_en: "Authors"
+        include_in_toc: true
+      
+      - file: "merano/intro/intro.md"
+        title: "Bevezető"
+        title_en: "Introduction"
+        include_in_toc: true
+
+  # Part 2: The World
+  - section: "A Világ"
+    section_en: "The World"
+    pages:
+      - file: "merano/01-foldrajz.md"
+        title: "Földrajz"
+        title_en: "Geography"
+        include_in_toc: true
+      
+      - file: "merano/02-tortenet.md"
+        title: "Merano története"
+        title_en: "History of Merano"
+        include_in_toc: true
+      
+      - file: "merano/03-varosok.md"
+        title: "Városok"
+        title_en: "Cities"
+        include_in_toc: true
+
+  # Part 3: Development Notes
+  - section: "Függelék"
+    section_en: "Appendix"
+    pages:
+      - file: "merano/04-otletek.md"
+        title: "Ötletek és Jegyzetek"
+        title_en: "Ideas and Notes"
+        include_in_toc: true
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2002-03-01"
+  rights: "Szabad Publikáció Licensz v1.0"
+  subject: "Szerepjáték, Posztapokaliptikus, Világbeállítás, Hungarian RPG"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - posztapokalipszis
+    - Mad Max
+    - világ
+    - Merano
+    - pszi
+    - boszorkányüldözés
+    - world setting
+  
+  # Dublin Core metadata
+  dc:
+    creator: "Nagy Balázs (Julian)"
+    contributor: "IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Build options
+build:
+  # Chapter numbering
+  number_chapters: true
+  number_sections: true
+  
+  # Table of contents
+  toc_depth: 3
+  
+  # Cross-references
+  enable_cross_refs: true
+  
+  # Output filename template
+  output_basename: "iksz-merano-v{version}"
+  
+  # Include metadata in output
+  include_metadata: true
+
+# Notes for conversion
+notes: |
+  Original publication: March 2002
+  Author: Nagy Balázs (Julian)
+  
+  This world supplement contains:
+  - Geography of Merano peninsula (~200,000 km²)
+  - Post-apocalyptic setting after "The Clash of the Gods"
+  - History from bunker survival to city-states
+  - Social structure: technicians, alchemists, psionics, chroniclers
+  - Cities and settlements
+  - Development notes for future expansion
+  
+  Setting features:
+  - Mad Max / Neon City atmosphere
+  - Medieval tech level with scavenged pre-apocalypse artifacts
+  - Psionic witch hunts
+  - Ignorance as a central theme
+  - City-states ruling over villages
+  - Wandering chroniclers (hírvivők) preserving history
+  - Technicians trying to reverse-engineer old technology
+  - Alchemists serving city leaders
+  - No traditional religion (concept lost)
+  - Harsh desert and wasteland environments
+  
+  Geographic regions:
+  - Örök Sziklasivatag (Eternal Rock Desert) - north
+  - Vörös Puszta (Red Wasteland) - northwest
+  - Rőthegység (Red Mountains) - northeast
+  - Békés Alföld (Peaceful Lowland) - east
+  - Feketeföld (Blackland) - center-south
+  - Sárga Sivatag (Yellow Desert) - south tip
+  - Égigérő Síkság (Sky-High Plains) - northeast
+  - Nordelán Hegység (Nordelan Mountains) - west
+  - Nagy Felföld (Great Highlands) - unknown, unreachable
+  
+  Social classes:
+  - City-state rulers (exploiting fear and ignorance)
+  - Technicians (respected, sought after)
+  - Alchemists (metal workers, tolerated)
+  - Psionics (hunted as witches, hidden)
+  - Chroniclers (wanderers, historians, storytellers)
+  - Farmers (settled, self-sufficient)
+  - Mercenaries, hunters, bandits (wanderers)
+  - Caravan workers (introduced metal currency)
+  
+  Originally intended expansions (commented out in source):
+  - Individual city descriptions (Morgador, Dunbar, Aldahir, Liramo, Verlina, Dorarir)
+  - Magic system
+  - Peoples/nations
+  - Bunker locations and contents
+  - Wonder places (pre-apocalypse remnants)
+  - Wandering souls (collective consciousness creating psionics)

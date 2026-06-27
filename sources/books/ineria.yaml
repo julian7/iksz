@@ -1,0 +1,219 @@
+# IKSZ Inéria - Book Definition
+# Fantasy world setting for IKSZ RPG
+
+book:
+  id: ineria
+  title: "IKSZ Inéria"
+  title_en: "IKSZ Ineria"
+  subtitle: "Fantasy Világleírás"
+  subtitle_en: "Fantasy World Setting"
+  version: "1.0"
+  language: hu
+  author: "Nagy Balázs (Jul the Keeper)"
+  compiled_by: "Nagy Balázs (Jul the Keeper)"
+  helped_by: "Varga József (Priest)"
+  description: "Inéria, az IKSZ egyik hivatalos fantasy világbeállítása. Egy vallásos szigetvilág, ahol az istenek három pártja (hatalom, egyensúly, rend) folyamatosan verseng a befolyásért. Tartalmazza a világ történelmét, fajait, országait, vallásait és időszámítását."
+  module_type: "Világbeállítás"
+  module_description: "Fantasy világ, Istenek, Fajok, Országok"
+  copyright: "© IKSZ Projekt 2002"
+  
+  # Cover page settings
+  cover:
+    enabled: true
+    show_date: true
+    show_version: true
+  
+  # Output options
+  output:
+    formats:
+      - epub
+      - html
+      - mobi
+      - pdf
+    
+    # PDF-specific options
+    pdf:
+      engine: pdflatex
+      geometry: "margin=1in"
+      papersize: a4
+      fontsize: 11pt
+    
+    # EPUB-specific options
+    epub:
+      cover: false
+      stylesheet: false
+    
+    # HTML-specific options
+    html:
+      standalone: true
+      toc: true
+      css: style.css
+
+# Book structure - chapters in reading order
+chapters:
+  # Copyright and legal
+  - section: "Jogi információk"
+    section_en: "Legal Information"
+    pages:
+      - file: "ineria/intro/copyright.md"
+        title: "Copyright"
+        title_en: "Copyright"
+        include_in_toc: false
+  
+  # Part 1: Introduction
+  - section: "Bevezetés"
+    section_en: "Introduction"
+    pages:
+      - file: "ineria/intro/preface.md"
+        title: "Szerzők"
+        title_en: "Authors"
+        include_in_toc: true
+      
+      - file: "ineria/intro/intro.md"
+        title: "Bevezető"
+        title_en: "Introduction"
+        include_in_toc: true
+
+  # Part 2: The World
+  - section: "A Világ"
+    section_en: "The World"
+    pages:
+      - file: "ineria/terkep.md"
+        title: "Térkép"
+        title_en: "Map"
+        include_in_toc: true
+      
+      - file: "ineria/fajok.md"
+        title: "Fajok"
+        title_en: "Races"
+        include_in_toc: true
+
+  # Part 3: History
+  - section: "Történelem"
+    section_en: "History"
+    pages:
+      - file: "ineria/tori/ostori.md"
+        title: "Őstörténelem"
+        title_en: "Ancient History"
+        include_in_toc: true
+      
+      - file: "ineria/tori/ujabbkor.md"
+        title: "Újabbkori történelem"
+        title_en: "Modern History"
+        include_in_toc: true
+
+  # Part 4: Religions
+  - section: "Vallások"
+    section_en: "Religions"
+    pages:
+      - file: "ineria/vallas/moleka.md"
+        title: "A Molekizmus tanítása"
+        title_en: "The Teaching of Molecism"
+        include_in_toc: true
+      
+      - file: "ineria/vallas/istenek.md"
+        title: "Istenek és vallások"
+        title_en: "Gods and Religions"
+        include_in_toc: true
+
+  # Part 5: Time System
+  - section: "Időszámítás"
+    section_en: "Time System"
+    pages:
+      - file: "ineria/ido/all.md"
+        title: "Inériai időszámítás"
+        title_en: "Inerian Time System"
+        include_in_toc: true
+
+  # Part 6: Appendix
+  - section: "Folytatás"
+    section_en: "To Be Continued"
+    pages:
+      - file: "ineria/folyt.md"
+        title: "Tervezett fejlesztések"
+        title_en: "Planned Developments"
+        include_in_toc: true
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2002-03-01"
+  rights: "Szabad Publikáció Licensz v1.0"
+  subject: "Szerepjáték, Fantasy, Világbeállítás, Hungarian RPG"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - fantasy
+    - világ
+    - Inéria
+    - istenek
+    - fajok
+    - történelem
+    - vallás
+    - world setting
+  
+  # Dublin Core metadata
+  dc:
+    creator: "Nagy Balázs (Jul the Keeper)"
+    contributor: "Varga József (Priest), IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Build options
+build:
+  # Chapter numbering
+  number_chapters: true
+  number_sections: true
+  
+  # Table of contents
+  toc_depth: 3
+  
+  # Cross-references
+  enable_cross_refs: true
+  
+  # Output filename template
+  output_basename: "iksz-ineria-v{version}"
+  
+  # Include metadata in output
+  include_metadata: true
+
+# Notes for conversion
+notes: |
+  Original publication: March 2002
+  Author: Nagy Balázs (Jul the Keeper) <js@iksz.hu>
+  Helper: Varga József (Priest) <priest66@freemail.hu>
+  
+  This world supplement contains:
+  - Map of Inéria (island world)
+  - 5 playable races (Humans, Elves, Dwarves, Orcs, Halflings/Manó)
+  - Ancient history and world genesis
+  - Modern history covering 7 major nations:
+    * Ponthetos (Dwarven Kingdom)
+    * Krimbor Nagyhercegség (Grand Duchy)
+    * Phiarr mágus földje (Wizard's Land)
+    * Ferelta erdőség (Druid Forest)
+    * Tai-Koris (Trading Kingdom)
+    * Elifeya (Elven Kingdom)
+    * Déli Államok Szövetsége (Southern Alliance)
+  - Two major religions: Molecism (duotheistic) and Barenum (dwarven)
+  - Cosmology: Three divine factions (Power, Balance, Order)
+  - 9 Crises/Epochs that shaped the world
+  - Unique time system (kvárts, nonáds, pentáds, oktáds)
+  - Notes on future expansions (travel guide, magic schools, etc.)
+  
+  Special features:
+  - Religious world where gods actively compete for influence
+  - No traditional good vs. evil, but Power vs. Balance vs. Order
+  - Post-heroic age setting (after the great wars)
+  - Rich political intrigue between nations
+  - Hundred Years' War history and current peace
+  - Peace Committee and Scholars' Society organizations
+  
+  Special conversion needs:
+  - Map image reference (ineria.png)
+  - Time system conversion table
+  - TODO notes for future content
+  - Cross-references between sections

@@ -1,0 +1,178 @@
+# IKSZ Fegyverek és felszerelések - Book Definition
+# Weapons and Equipment supplement for IKSZ RPG
+
+book:
+  id: fegyverek
+  title: "IKSZ Fegyverek és felszerelések"
+  title_en: "IKSZ Weapons and Equipment"
+  subtitle: "Szabálykiegészítő"
+  subtitle_en: "Rules Supplement"
+  version: "1.0"
+  language: hu
+  author: "Nagy Balázs, Kósa László, Polán Tamás"
+  compiled_by: "Nagy Balázs"
+  description: "Az IKSZ harci rendszerének részletes szabályai, fegyverlistája és felszerelés-kiegészítő. Tartalmazza a közelharci és lőfegyverek teljes listáját, harci képzettségeket és a harc részletes szabályait."
+  module_type: "Szabálykiegészítő"
+  module_description: "Harc, fegyverek, felszerelés"
+  copyright: "© IKSZ Projekt 1997-2002"
+  
+  # Cover page settings
+  cover:
+    enabled: true
+    show_date: true
+    show_version: true
+  
+  # Output options
+  output:
+    formats:
+      - epub
+      - html
+      - mobi
+      - pdf
+    
+    # PDF-specific options
+    pdf:
+      engine: pdflatex
+      geometry: "margin=1in"
+      papersize: a4
+      fontsize: 11pt
+    
+    # EPUB-specific options
+    epub:
+      cover: false
+      stylesheet: false
+    
+    # HTML-specific options
+    html:
+      standalone: true
+      toc: true
+      css: style.css
+
+# Book structure - chapters in reading order
+chapters:
+  # Copyright and legal
+  - section: "Jogi információk"
+    section_en: "Legal Information"
+    pages:
+      - file: "fegyverek/intro/copyright.md"
+        title: "Copyright"
+        title_en: "Copyright"
+        include_in_toc: false
+  
+  # Part 1: Introduction
+  - section: "Bevezetés"
+    section_en: "Introduction"
+    pages:
+      - file: "fegyverek/intro/preface.md"
+        title: "Szerzők"
+        title_en: "Authors"
+        include_in_toc: true
+      
+      - file: "fegyverek/intro/intro.md"
+        title: "Bevezető"
+        title_en: "Introduction"
+        include_in_toc: true
+
+  # Part 2: Combat and Weapons
+  - section: "Fegyverek és harci stílusok"
+    section_en: "Weapons and Combat Styles"
+    pages:
+      - file: "fegyverek/harc/intro.md"
+        title: "A harc"
+        title_en: "Combat"
+        include_in_toc: true
+      
+      - file: "fegyverek/harc/skills.md"
+        title: "Harci képzettségek"
+        title_en: "Combat Skills"
+        include_in_toc: true
+      
+      - file: "fegyverek/harc/properties.md"
+        title: "A fegyverek tulajdonságai"
+        title_en: "Weapon Properties"
+        include_in_toc: true
+      
+      - file: "fegyverek/harc/example.md"
+        title: "Hogyan folyik le a harc?"
+        title_en: "How Does Combat Work?"
+        include_in_toc: true
+      
+      - file: "fegyverek/harc/continuous.md"
+        title: "Harc - Folyamatos rendszer"
+        title_en: "Combat - Continuous System"
+        include_in_toc: true
+      
+      - file: "fegyverek/weapons/unarmed.md"
+        title: "Pusztakezes harc"
+        title_en: "Unarmed Combat"
+        include_in_toc: true
+      
+      - file: "fegyverek/weapons/melee.md"
+        title: "Közelharci fegyverek"
+        title_en: "Melee Weapons"
+        include_in_toc: true
+      
+      - file: "fegyverek/weapons/ranged.md"
+        title: "Lőfegyverek"
+        title_en: "Ranged Weapons"
+        include_in_toc: true
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2002-03-01"
+  rights: "Szabad Publikáció Licensz v1.0"
+  subject: "Szerepjáték, Fegyverek, Harc, Hungarian RPG"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - fegyverek
+    - harc
+    - combat
+    - weapons
+    - szabálykiegészítő
+  
+  # Dublin Core metadata
+  dc:
+    creator: "Nagy Balázs, Kósa László, Polán Tamás"
+    contributor: "IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Build options
+build:
+  # Chapter numbering
+  number_chapters: true
+  number_sections: true
+  
+  # Table of contents
+  toc_depth: 3
+  
+  # Cross-references
+  enable_cross_refs: true
+  
+  # Output filename template
+  output_basename: "iksz-fegyverek-v{version}"
+  
+  # Include metadata in output
+  include_metadata: true
+
+# Notes for conversion
+notes: |
+  Original publication: March 1, 2002
+  Authors: Nagy Balázs (Jul the Keeper), Kósa László (Klinsi), Polán Tamás (Rizzo)
+  
+  This supplement contains:
+  - Detailed combat rules
+  - Combat skills and skill trees
+  - Weapon properties and statistics
+  - Complete melee weapon list
+  - Complete ranged weapon list
+  - Unarmed combat rules
+  - Combat examples
+  
+  Heavy table content - requires careful conversion of weapon stat blocks
+  and skill tables from ConTeXt to Markdown.

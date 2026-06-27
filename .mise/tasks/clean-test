@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE description="Clean test artifacts"
+set -euo pipefail
+
+rm -rf htmlcov/
+rm -rf .pytest_cache/
+rm -rf .coverage
+find . -name ".pytest_cache" -type d -delete

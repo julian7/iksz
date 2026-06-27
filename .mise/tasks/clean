@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#MISE description="Clean build artifacts"
+set -euo pipefail
+
+rm -rf results/ \
+    htmlcov/ \
+    .pytest_cache/ \
+    .mypy_cache/ \
+    .ruff_cache/ \
+    build/__pycache__/ \
+    tests/__pycache__/
+find . -name "*.pyc" -delete
+find . -name "__pycache__" -type d -delete

@@ -1,0 +1,59 @@
+book:
+  id: core-v1.0
+  title: "IKSZ Alapszabály"
+  subtitle: "v1.0 - Történelmi verzió"
+  version: "1.0"
+  date: "2000. december"
+  author: "IKSZ Fejlesztők"
+  language: hu
+  description: "Az IKSZ alapszabály eredeti verziója (2000. december) - folyamatos harcrendszerrel és Kezdeményezés tulajdonsággal"
+
+chapters:
+  - section: "Bevezetés"
+    pages:
+      - file: "core-v1.0/intro/preface.md"
+        title: "Előszó"
+      - file: "core-v1.0/intro/intro.md"
+        title: "Bevezetés"
+
+  - section: "Játékosoknak"
+    pages:
+      - file: "core-v1.0/player/howto.md"
+        title: "Hogyan játsszunk?"
+      - file: "core-v1.0/player/example.md"
+        title: "Példakarakter"
+
+  - section: "Karakteralkotás"
+    pages:
+      - file: "core-v1.0/karakter/karakter.md"
+        title: "A karakter kidolgozása"
+      - file: "core-v1.0/karakter/fejl.md"
+        title: "Karakterfejlődés"
+      - file: "core-v1.0/karakter/tul.md"
+        title: "Tulajdonságok"
+      - file: "core-v1.0/karakter/kepz.md"
+        title: "Képzettségek"
+      - file: "core-v1.0/karakter/elony.md"
+        title: "Előnyök és hátrányok"
+
+  - section: "Környezet"
+    pages:
+      - file: "core-v1.0/korny/proba.md"
+        title: "Próbadobás"
+      - file: "core-v1.0/korny/seb.md"
+        title: "Sebződés"
+      - file: "core-v1.0/korny/harc-fazis.md"
+        title: "Harcrendszer: fázis alapú (v1.1)"
+      - file: "core-v1.0/korny/harc-folyamatos.md"
+        title: "Harcrendszer: folyamatos (v1.0)"
+      - file: "core-v1.0/korny/felsz.md"
+        title: "Felszerelés"
+
+  - section: "Játékmestereknek"
+    pages:
+      - file: "core-v1.0/gm/jatekosok.md"
+        title: "Játékosok kezelése"
+      - file: "core-v1.0/gm/targyak.md"
+        title: "Tárgyak"
+      - file: "core-v1.0/gm/fp.md"
+        title: "Fejlődési pontok"

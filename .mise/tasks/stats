@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#MISE description="Show project statistics"
+set -euo pipefail
+
+echo "=== IKSZ Project Statistics ==="
+echo
+
+echo "Source files:"
+find build -name "*.py" | wc -l | xargs echo "  Python modules:"
+find build -name "*.py" -exec wc -l {} + 2>/dev/null | tail -1 | awk '{print "  Total lines: " $1}'
+
+echo
+echo "Scripts:"
+find scripts -name "*.py" | wc -l | xargs echo "  Utility scripts:"
+
+echo
+echo "Book definitions:"
+find sources/books -name "*.yaml" 2>/dev/null | wc -l | xargs echo "  Books:"
+
+echo
+echo "Content files:"
+find sources -name "*.md" 2>/dev/null | wc -l | xargs echo "  Markdown chapters:"
+find sources -name "*.png" -o -name "*.jpg" 2>/dev/null | wc -l | xargs echo "  Images:"

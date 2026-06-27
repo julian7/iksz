@@ -1,0 +1,150 @@
+# IKSZ Reika - Book Definition
+# Fantasy world module - "Szép új világ" (Beautiful New World)
+
+book:
+  id: reika
+  title: "IKSZ Reika"
+  title_en: "IKSZ Reika"
+  subtitle: "Szép új világ"
+  subtitle_en: "Beautiful New World"
+  version: "1.0"
+  language: hu
+  author: "Kósa László (klinsi)"
+  compiled_by: "Kósa László"
+  description: "Egy IKSZ fantasy világmodul, amely a Ramír nép történetét, Inorr prófétát, és a Reika kontinens birodalmait mutatja be. A világ magában foglalja az emberek, elfek, törpök és a rejtélyes gargoyle faj együttélését."
+  module_type: "Világmodul"
+  module_description: "Fantasy világ"
+  copyright: "© IKSZ Projekt 1997-2000"
+  
+  # Cover page settings
+  cover:
+    enabled: true
+    show_date: true
+    show_version: true
+  
+  # Output options
+  output:
+    formats:
+      - epub
+      - html
+      - mobi
+      - pdf
+    
+    # PDF-specific options
+    pdf:
+      engine: pdflatex
+      geometry: "margin=1in"
+      papersize: a4
+      fontsize: 11pt
+    
+    # EPUB-specific options
+    epub:
+      cover: false
+      stylesheet: false
+    
+    # HTML-specific options
+    html:
+      standalone: true
+      toc: true
+      css: style.css
+
+# Book structure - chapters in reading order
+chapters:
+  # Copyright and legal
+  - section: "Jogi információk"
+    section_en: "Legal Information"
+    pages:
+      - file: "reika/intro/copyright.md"
+        title: "Copyright"
+        title_en: "Copyright"
+        include_in_toc: false
+  
+  # Part 1: Introduction
+  - section: "Bevezetés"
+    section_en: "Introduction"
+    pages:
+      - file: "reika/intro/authors.md"
+        title: "Szerzők"
+        title_en: "Authors"
+        include_in_toc: true
+      
+      - file: "reika/intro/intro.md"
+        title: "Bevezető"
+        title_en: "Introduction"
+        include_in_toc: true
+
+  # Part 2: History
+  - section: "Történelem"
+    section_en: "History"
+    pages:
+      - file: "reika/01-haboruk.md"
+        title: "Háborúk Kora"
+        title_en: "Age of Wars"
+        include_in_toc: true
+      
+      - file: "reika/02-kaosz.md"
+        title: "Káoszkor"
+        title_en: "Age of Chaos"
+        include_in_toc: true
+
+  # Part 3: The World
+  - section: "A Világ"
+    section_en: "The World"
+    pages:
+      - file: "reika/03-nepek.md"
+        title: "Lakosság"
+        title_en: "Population"
+        include_in_toc: true
+      
+      - file: "reika/04-birodalmak.md"
+        title: "Birodalmak"
+        title_en: "Empires"
+        include_in_toc: true
+
+  # Appendix
+  - section: "Függelék"
+    section_en: "Appendix"
+    pages:
+      - file: "reika/99-fuggelek.md"
+        title: "Függelék"
+        title_en: "Appendix"
+        include_in_toc: true
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2000-05-22"
+  rights: "Szabad terjesztés"
+  subject: "Szerepjáték, Fantasy, Világbeállítás, Hungarian RPG"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - fantasy
+    - világ
+    - Reika
+    - Ramír
+    - Inorr
+    - gargoyle
+    - world setting
+  
+  # Dublin Core metadata
+  dc:
+    creator: "Kósa László (klinsi)"
+    contributor: "IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Build options
+build:
+  # Chapter numbering
+  number_chapters: true
+  number_sections: true
+  
+  # Table of contents
+  toc_depth: 2
+  
+  # Cross-references
+  link_citations: false

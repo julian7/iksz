@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="BookID">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:title>$title$</dc:title>
+    $if(subtitle)$
+    <dc:title id="subtitle">$subtitle$</dc:title>
+    <meta refines="#subtitle" property="title-type">subtitle</meta>
+    $endif$
+    <dc:creator>$author$</dc:creator>
+    $if(compiled_by)$
+    <dc:contributor id="compiler">$compiled_by$</dc:contributor>
+    <meta refines="#compiler" property="role" scheme="marc:relators">com</meta>
+    $endif$
+    <dc:language>$lang$</dc:language>
+    <dc:identifier id="BookID">$identifier$</dc:identifier>
+    $if(date)$
+    <dc:date>$date$</dc:date>
+    $endif$
+    $if(publisher)$
+    <dc:publisher>$publisher$</dc:publisher>
+    $endif$
+    $if(rights)$
+    <dc:rights>$rights$</dc:rights>
+    $endif$
+    $if(description)$
+    <dc:description>$description$</dc:description>
+    $endif$
+    $if(subject)$
+    <dc:subject>$subject$</dc:subject>
+    $endif$
+    <meta property="dcterms:modified">$timestamp$</meta>
+  </metadata>
+</package>

@@ -1,0 +1,545 @@
+/* IKSZ HTML Site CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --bg-color: #fff;
+    --sidebar-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --code-bg: #f5f5f5;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Container for multi-page site */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 280px;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    overflow-y: auto;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.sidebar .book-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.sidebar .book-version {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav li {
+    margin-bottom: 5px;
+}
+
+.sidebar nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: var(--accent-color);
+    color: white;
+}
+
+.sidebar .section-header {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 280px;
+    flex: 1;
+    padding: 40px;
+    max-width: 900px;
+}
+
+/* Typography */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+}
+
+h4 {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+h5,
+h6 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Lists */
+ul,
+ol {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+th {
+    background: var(--sidebar-bg);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Code */
+code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', Monaco, monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background: var(--code-bg);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #555;
+    font-style: italic;
+}
+
+/* Strong emphasis */
+strong {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Floating elements - key feature for IKSZ tables */
+.float-right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    max-width: 40%;
+    clear: right;
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    max-width: 40%;
+    clear: left;
+}
+
+/* Tables inside floating divs should not have extra margin */
+.float-right table,
+.float-left table {
+    margin: 0;
+    width: 100%;
+}
+
+/* Multi-column layout - key feature for IKSZ */
+.columns {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+.columns.col-3 {
+    column-count: 3;
+}
+
+/* Prevent column breaks in important elements */
+.keep-together,
+h2,
+h3,
+h4,
+table {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+/* Keep list items together if possible */
+li {
+    break-inside: avoid-column;
+}
+
+/* Chapter Navigation */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid var(--border-color);
+    gap: 15px;
+}
+
+.chapter-nav a {
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.chapter-nav a:hover {
+    background: var(--link-hover);
+}
+
+.chapter-nav .disabled {
+    padding: 10px 20px;
+    background: #ccc;
+    color: #666;
+    border-radius: 5px;
+}
+
+/* Table of Contents */
+#TOC {
+    background: var(--sidebar-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+#TOC ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+#TOC>ul {
+    margin-left: 0;
+}
+
+#TOC ul ul {
+    margin-left: 20px;
+}
+
+#TOC li {
+    margin-bottom: 8px;
+}
+
+#TOC a {
+    color: var(--text-color);
+}
+
+#TOC a:hover {
+    color: var(--accent-color);
+}
+
+/* Index Page */
+.index-page .intro {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.index-page .chapter-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.index-page .chapter-list li {
+    margin-bottom: 20px;
+}
+
+.index-page .chapter-list a {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.index-page .chapter-list .description {
+    color: #666;
+    margin-top: 5px;
+    font-size: 0.95em;
+}
+
+/* Subtitle styling */
+.subtitle {
+    font-size: 1.3em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Horizontal rules */
+hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 30px 0;
+}
+
+/* Definition lists */
+dt {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    /* Disable floats on mobile for better readability */
+    .float-right,
+    .float-left {
+        float: none;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Single column on mobile */
+    .columns {
+        column-count: 1;
+    }
+
+    /* Smaller typography */
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    /* Adjust table for mobile */
+    table {
+        font-size: 0.9em;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    /* Stack navigation buttons */
+    .chapter-nav {
+        flex-wrap: wrap;
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    .float-right,
+    .float-left {
+        max-width: 50%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+    }
+
+    .sidebar,
+    .chapter-nav {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Keep floats in print */
+    .float-right,
+    .float-left {
+        max-width: 40%;
+    }
+
+    /* Avoid page breaks */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+    }
+
+    table,
+    figure,
+    img {
+        page-break-inside: avoid;
+    }
+
+    /* Show URLs for links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+
+    /* Don't show URL for internal links */
+    a[href^="#"]:after {
+        content: "";
+    }
+}

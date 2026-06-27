@@ -1,0 +1,138 @@
+[tools]
+pandoc = "3.10"
+typst = "0.15.0"
+
+[tasks."build-book"]
+description = "Build a specific book in all formats"
+run = "uv run python -m build book $1"
+
+[tasks."build-format"]
+description = "Build a book in a specific format"
+run = "uv run python -m build book $1 -f $2"
+
+[tasks."build-all"]
+alias = "default"
+description = "Build all books"
+run = "uv run python -m build all"
+
+[tasks."build-site"]
+description = "Generate HTML site for a book"
+run = "uv run python -m build site $1"
+
+[tasks."build-site-all"]
+description = "Generate sites for all books"
+run = "uv run python -m build site"
+
+[tasks.format]
+description = "Format code with ruff"
+run = "uv run ruff format ."
+
+[tasks.lint]
+description = "Lint code with ruff"
+run = "uv run ruff check ."
+
+[tasks."lint-fix"]
+description = "Fix linting issues automatically"
+run = "uv run ruff check --fix ."
+
+[tasks.typecheck]
+description = "Run type checker"
+run = "uv run mypy build/"
+
+[tasks."format-check"]
+description = "Check code formatting"
+run = "uv run ruff format --check ."
+
+[tasks.sync]
+description = "Install and sync dependencies"
+run = "uv sync --all-extras"
+
+[tasks."sync-dev"]
+description = "Install dev dependencies only"
+run = "uv sync --extra dev"
+
+[tasks.check]
+description = "Run all code quality checks"
+depends = ["format", "lint", "typecheck"]
+
+[tasks.ci]
+description = "Run full CI check"
+depends = ["format-check", "lint", "typecheck", "test:cov"]
+
+[tasks."ci-quick"]
+description = "Run quick CI check"
+depends = ["format-check", "lint", "typecheck", "test:all"]
+
+[tasks.quick]
+description = "Quick build: quality checks and core rulebook EPUB"
+depends = ["check"]
+run = "uv run python -m build book core-rulebook -f epub"
+
+[tasks.full]
+description = "Run all checks and builds"
+depends = ["check", "build-all", "build-site-all"]
+
+[tasks.dev]
+description = "Format, lint, and quick build"
+depends = ["format", "lint", "quick"]
+
+[tasks.rebuild]
+description = "Clean and rebuild everything"
+depends = ["clean", "build-all"]
+
+[tasks."test:list"]
+description = "List available test tasks"
+run = "mise tasks ls --name-only | grep '^test:'"
+
+[tasks."test:all"]
+description = "Run all tests"
+run = "uv run pytest"
+
+[tasks."test:verbose"]
+description = "Run tests with verbose output"
+run = "uv run pytest -v"
+
+[tasks."test:cov"]
+description = "Run tests with coverage report"
+run = "uv run pytest --cov=build --cov-report=term-missing"
+
+[tasks."test:cov-html"]
+description = "Run tests with HTML coverage report"
+run = "uv run pytest --cov=build --cov-report=html"
+
+[tasks."test:cov-open"]
+description = "Run tests and open coverage report in browser"
+depends = ["test:cov-html"]
+run = "open htmlcov/index.html"
+
+[tasks."test:file"]
+description = "Run a specific test file"
+run = "uv run pytest tests/$1 -v"
+
+[tasks."test:match"]
+description = "Run tests matching a pattern"
+run = "uv run pytest -k $1 -v"
+
+[tasks."test:watch"]
+description = "Watch tests"
+run = "uv run ptw tests/"
+
+[tasks."test:parallel"]
+description = "Run tests in parallel"
+run = "uv run pytest -n auto"
+
+[tasks."test:failed"]
+description = "Run only failed tests from the last run"
+run = "uv run pytest --lf -v"
+
+[tasks."test:slow"]
+description = "Show the slowest tests"
+run = "uv run pytest --durations=10"
+
+[tasks."test:debug"]
+description = "Run tests with debug output"
+run = "uv run pytest -vv -s"
+
+[tasks."test:fail-fast"]
+description = "Run tests and stop on the first failure"
+run = "uv run pytest -x"

@@ -1,0 +1,193 @@
+# IKSZ Novellák - Book Definition
+# Anthology of four IKSZ short stories set in different worlds
+
+book:
+  id: novellak
+  title: "IKSZ Novellák"
+  title_en: "IKSZ Short Stories"
+  subtitle: "Történetek az IKSZ világokból"
+  subtitle_en: "Stories from the IKSZ Worlds"
+  version: "1.0"
+  language: hu
+  author: "Nagy Balázs és Érfalvy Áron"
+  compiled_by: "Nagy Balázs (Jul the Keeper)"
+  description: "Az IKSZ univerzumban játszódó négy novella gyűjteménye. A történetek különböző világokban játszódnak: Doraddon sötét fantázia világában, Inéria klasszikus fantasy környezetében, a Fényhozó legendájának epikus világában, és egy cyberpunk jövőben."
+  module_type: "Fikció"
+  module_description: "Novellák, Történetek, IKSZ világok"
+  copyright: "© Nagy Balázs, Érfalvy Áron 2000-2003"
+  
+  # Cover page settings
+  cover:
+    enabled: true
+    show_date: true
+    show_version: true
+  
+  # Output options
+  output:
+    formats:
+      - epub
+      - html
+      - mobi
+      - pdf
+    
+    # PDF-specific options
+    pdf:
+      engine: pdflatex
+      geometry: "margin=1in"
+      papersize: a4
+      fontsize: 11pt
+    
+    # EPUB-specific options
+    epub:
+      cover: false
+      stylesheet: false
+    
+    # HTML-specific options
+    html:
+      standalone: true
+      toc: true
+      css: style.css
+
+# Book structure - four novels as chapters
+chapters:
+  # Anthology Introduction
+  - section: "Előszó"
+    section_en: "Preface"
+    pages:
+      - file: "novellak/intro/preface.md"
+        title: "Az antológiáról"
+        title_en: "About the Anthology"
+        include_in_toc: true
+  
+  # Novel 1: A hajó (Doraddon)
+  - section: "A hajó"
+    section_en: "The Ship"
+    pages:
+      - file: "novellak/ahajo.md"
+        title: "A hajó"
+        title_en: "The Ship"
+        include_in_toc: true
+
+  # Novel 2: Álomlátó (Inéria)
+  - section: "Az Álomlátó"
+    section_en: "The Dream-Seer"
+    pages:
+      - file: "novellak/alomlato.md"
+        title: "Az Álomlátó"
+        title_en: "The Dream-Seer"
+        include_in_toc: true
+
+  # Novel 3: Fényhozó Gyermek
+  - section: "A fényhozó legendája"
+    section_en: "The Legend of the Light-Bringer"
+    pages:
+      - file: "novellak/fenyhozo-gyermek.md"
+        title: "A fényhozó legendája: A gyermek"
+        title_en: "The Legend of the Light-Bringer: The Child"
+        include_in_toc: true
+
+  # Novel 4: Know Your Enemy (English, Cyberpunk)
+  - section: "Ismerd fel ellenfeled"
+    section_en: "Know Your Enemy"
+    pages:
+      - file: "novellak/knowyourenemy.md"
+        title: "Ismerd fel ellenfeled / Know Your Enemy"
+        title_en: "Know Your Enemy"
+        include_in_toc: true
+
+# Metadata for ebook readers
+metadata:
+  publisher: "IKSZ Projekt"
+  publication_date: "2003-04-17"
+  rights: "Szabad Publikáció Licensz v1.0"
+  subject: "Szerepjáték, Fantasy, Fikció, Novellák, Hungarian RPG, Fiction"
+  keywords:
+    - IKSZ
+    - szerepjáték
+    - RPG
+    - magyar
+    - novellák
+    - fikció
+    - fantasy
+    - cyberpunk
+    - Doraddon
+    - Inéria
+    - Fényhozó
+    - Hungarian fiction
+    - short stories
+  
+  # Dublin Core metadata
+  dc:
+    creator: "Nagy Balázs (Jul the Keeper), Érfalvy Áron"
+    contributor: "IKSZ Közösség"
+    coverage: "Magyarország"
+    type: "Text"
+    format: "Book"
+
+# Build options
+build:
+  # Chapter numbering - disabled for anthology
+  number_chapters: false
+  number_sections: false
+  
+  # Table of contents
+  toc_depth: 2
+  
+  # Cross-references
+  enable_cross_refs: false
+  
+  # Output filename template
+  output_basename: "iksz-novellak-v{version}"
+  
+  # Include metadata in output
+  include_metadata: true
+
+# Notes for conversion
+notes: |
+  IKSZ Short Story Anthology
+  
+  This collection contains four short stories set in different IKSZ worlds:
+  
+  1. "A hajó" (The Ship) - Doraddon setting
+     Author: Nagy Balázs (Julian)
+     Date: November 12, 2000
+     World: Doraddon (dark fantasy, apocalyptic)
+     Theme: Escape from a dying city, plague/corruption spreading
+  
+  2. "Az Álomlátó" (The Dream-Seer) - Inéria setting
+     Author: Nagy Balázs (Julian)
+     Date: November 12, 2000
+     World: Inéria (classic fantasy)
+     Theme: Dreams connecting two parallel worlds, mystical adventure
+  
+  3. "A fényhozó legendája: A gyermek" (The Legend of the Light-Bringer: The Child)
+     Author: Érfalvy Áron
+     Date: April 17, 2003
+     World: Fényhozó (epic fantasy)
+     Theme: Origin story of a legendary hero, coming of age
+  
+  4. "Ismerd fel ellenfeled / Know Your Enemy"
+     Author: Nagy Balázs (Julian)
+     Date: March 3, 2002
+     World: Cyberpunk future
+     Language: English
+     Theme: AI consciousness, virtual reality, identity
+  
+  Conversion notes:
+  - Original sources were PDF files in original/novel/
+  - Extracted to plain text in books/novels/src/*.txt
+  - Cleaned and formatted to Markdown in books/novels/*.md
+  - Moved to sources/novellak/*.md for build system
+  
+  Special considerations:
+  - Each story is self-contained, no cross-references
+  - "Know Your Enemy" is in English (all others in Hungarian)
+  - Stories showcase different IKSZ worlds and genres
+  - Published across 3 years (2000-2003)
+  - Demonstrates versatility of IKSZ system
+  
+  Build settings:
+  - No chapter numbering (anthology format)
+  - Each story is a separate section
+  - Page breaks before each story recommended
+  - Original publication dates preserved in story headers
